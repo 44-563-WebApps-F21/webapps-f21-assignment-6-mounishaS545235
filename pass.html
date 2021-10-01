@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pass Page</title>
+    </head>
+<body>
+    <h2>"Pass phrase by" Mounisha Guntupalli</h2>
+    <form>
+        <label for="secret_phrase">Enter the secret phrase: </label>
+        <input type="password" id="secret_phrase" name="secret_phrase" value="Let me in"> <br/><br/>
+
+        <label for="phrase">Enter a phrase: </label>
+        <input type="text" id="check_phrase" name="phrase" autofocus> <br/><br/>
+
+        <input type="button" onclick="processPhrase()" value="Check the phrase">
+    </form>
+
+    <p id="result"> </p>
+
+    <script>
+        var correct = 0;
+        var wrong = 0;
+        function processPhrase() {
+            console.log("Checking the phrases entered");
+            secret_phrase = document.getElementById("secret_phrase").value;
+            check_phrase  = document.getElementById("check_phrase").value;
+            out = document.getElementById("result");
+
+            if (secret_phrase == check_phrase) {
+                correct = correct+1;
+                alert("Access allowed");
+                out.innerHTML = "Correct counts: "+correct;
+            } else {
+                wrong = wrong+1;
+                alert("Access denied");
+                out.innerHTML = "Wrong counts: "+wrong;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
