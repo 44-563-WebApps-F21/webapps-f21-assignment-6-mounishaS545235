@@ -13,6 +13,14 @@
         <input type="text" id="check_phrase" name="phrase" autofocus> <br/><br/>
 
         <input type="button" onclick="processPhrase()" value="Check the phrase">
+        <br/>
+        <div style="display: flex">
+            <p id="result" >Displays the correct and wrong counts here</p>
+        </div>
+        <br/><br/>
+        <div class="container" id="output_image">
+            <img src="Gorilla.jpg" class="img-fluid" id="image_click" onclick="newImage()" alt="Gorilla" width="200" height="200">
+        </div>
     </form>
 
     <p id="result"> </p>
@@ -20,6 +28,7 @@
     <script>
         var correct = 0;
         var wrong = 0;
+        var usingImage = 1;
         function processPhrase() {
             console.log("Checking the phrases entered");
             secret_phrase = document.getElementById("secret_phrase").value;
@@ -35,6 +44,29 @@
                 alert("Access denied");
                 out.innerHTML = "Wrong counts: "+wrong;
             }
+        }
+
+        function newImage(){
+            console.log("Changing the image when clicked");
+            var image = document.getElementById("image_click").value;
+            switch(usingImage){
+                case 1:
+                    image = '<img src="Polar_Bear.jpg" class="img-fluid" id="image_click" onclick="newImage()" alt="Gorilla" width="200" height="200"></img>';
+                    usingImage = 2;
+                    break;
+                case 2:
+                    image = '<img src="Tiger.jpg" class="img-fluid" id="image_click" onclick="newImage()" alt="Gorilla" width="200" height="200"></img>';
+                    usingImage = 3;
+                    break;
+                case 3:
+                    image = '<img src="Gorilla.jpg" class="img-fluid" id="image_click" onclick="newImage()" alt="Gorilla" width="200" height="200"></img>';
+                    usingImage = 1;
+                    break;
+                default:
+                    image = '<img src="#!"></img>';
+                    alert("No image is loaded");
+            }
+            document.getElementById("output_image").innerHTML = image;
         }
     </script>
 
