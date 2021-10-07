@@ -6,18 +6,20 @@
 </head>
 
 <body>
-    <h2>"Pass phrase by" Mounisha Guntupalli</h2>
+    <h2 style="color: darkolivegreen;font-size: 30px;font-family: 'Times New Roman', Times, serif;">"Pass phrase by" Mounisha Guntupalli</h2>
     <form>
-        <label for="secret_phrase">Enter the secret phrase: </label>
-        <input type="password" id="secret_phrase" name="secret_phrase" value="Let me in"> <br /><br />
+        <label style="font-size: 20px; font-family: 'Times New Roman', Times, serif;" for="secret_phrase">Enter the secret phrase: </label>
+        <input style="margin-left: 40px; border: 2px solid navy; border-radius: 2px; " type="password" id="secret_phrase" name="secret_phrase" value="Let me in"> <br /><br />
 
-        <label for="phrase">Enter a phrase: </label>
-        <input type="text" id="check_phrase" name="phrase" autofocus> <br /><br />
+        <label style="font-size: 20px; font-family: 'Times New Roman', Times, serif;" for="phrase">Enter a phrase: </label>
+        <input style="margin-left: 107px; border: 2px solid navy; border-radius: 2px; "type="text" id="check_phrase" name="phrase" autofocus> <br /><br />
 
-        <input type="button" onclick="processPhrase()" value="Check the phrase">
+        <input style="background-color:silver; border-style: solid; border-radius: 4px; padding: 10px 24px; text-decoration: 10px solid;"
+        type="button" onclick="processPhrase()" value="Check the phrase">
         <br />
         <div style="display: flex">
-            <p id="result">Displays the correct and wrong counts here</p>
+            <p style="background-color: skyblue; width: 100%;font-size: 20px; font-family: 'Times New Roman', Times, serif;" 
+            id="result">Displays the correct and wrong counts here</p>
         </div>
         <br /><br />
         <div class="container" id="output_image">

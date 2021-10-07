@@ -7,23 +7,22 @@
 
 <body>
 
-    <h1>Mounisha Guntupalli computes</h1>
+    <h1 style="color: navy; font-size: 30px;font-family:Arial, Helvetica, sans-serif">Mounisha Guntupalli computes</h1>
     <form>
-        <label style="font-size: 20px; font-family: 'Times New Roman', Times, serif;" for="base_element_label">Enter a
-            base: </label>
-        <input style="margin-left: 93px;" type="number" id="base_element" name="base element" value=10>
+        <label style="font-size: 20px; font-family: 'Times New Roman', Times, serif;" for="base_element_label">Enter a base: </label>
+        <input style="margin-left: 93px;border: 2px solid olive; border-radius: 2px; " type="number" id="base_element" name="base element" value=10>
         <br /><br />
 
-        <label style="font-size: 20px; font-family: 'Times New Roman', Times, serif;" for="exponent_element_label">Enter
-            an exponent: </label>
-        <input style="margin-left: 45px;" type="number" id="exponent_element" name="exponent element" value=2>
+        <label style="font-size: 20px; font-family: 'Times New Roman', Times, serif;" for="exponent_element_label">Enter an exponent: </label>
+        <input style="margin-left: 45px;border: 2px solid olive; border-radius: 2px; " type="number" id="exponent_element" name="exponent element" value=2>
         <br /><br />
 
         <input
             style="background-color:thistle; border-style: solid; border-radius: 4px; padding: 10px 24px; text-decoration: 10px solid;"
             type="button" onclick="powers()" value="Compute"> <br /><br />
 
-        <p id="result1">The calculated values are displayed here</p>
+        <p style="background-color:plum; width: 100%;font-size: 20px; font-family:sans-serif" 
+        id="result1">The calculated values are displayed here</p>
         <br />
 
         <input type="radio" id="addition" name="arithmetic" value="addition" onclick="processRadio(this.value)">
@@ -37,7 +36,8 @@
 
         <input type="radio" id="division" name="arithmetic" value="division" onclick="processRadio(this.value)">
         <label for="division">/</label><br />
-        <p id="result2">The calculated values are displayed here</p>
+        <p style="background-color:plum; width: 100%;font-size: 20px; font-family:sans-serif" 
+        id="result2">The calculated values are displayed here</p>
     </form>
 
     <script>
